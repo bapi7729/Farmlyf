@@ -10,9 +10,14 @@ import { ProductsContextProvider } from "@/context/productContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Farmley - Premium Dry Fruits & Nuts",
+  title: "Farmlyf - Premium Dry Fruits & Nuts",
   description:
     "Pure, Nutritious, and Delicious Dry Fruits sourced from the finest farms",
+  icons: {
+    icon: "/farmlyf short logo.jpg",
+    shortcut: "/farmlyf short logo.jpg",
+    apple: "/farmlyf short logo.jpg",
+  },
 };
 
 export default function RootLayout({
@@ -24,6 +29,11 @@ export default function RootLayout({
     <ProductsContextProvider>
       <AuthProvider>
         <html lang="en" suppressHydrationWarning>
+          <head>
+            <link rel="icon" href="/farmlyf short logo.jpg" type="image/jpeg" />
+            <link rel="shortcut icon" href="/farmlyf short logo.jpg" type="image/jpeg" />
+            <link rel="apple-touch-icon" href="/farmlyf short logo.jpg" />
+          </head>
           <body className={`overflow-x-hidden max-w-screen`}>
             <Header />
             <main className="min-h-[calc(100vh-140px)]">{children}</main>
